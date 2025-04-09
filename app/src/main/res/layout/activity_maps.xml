@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Alert icon and message in top-center -->
+        <LinearLayout
+            android:id="@+id/alertLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top|center_horizontal"
+            android:paddingTop="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/alertIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_alert"
+                android:contentDescription="@string/alert_icon" />
+
+            <TextView
+                android:id="@+id/alertText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accident_detected"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/accidentImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+</LinearLayout>

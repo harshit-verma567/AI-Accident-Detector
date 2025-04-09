@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InstaRescue</string>
+    <string name="accident_detected">⚠️ Accident Detected!</string>
+    <string name="alert_icon">Alert icon</string>
+</resources>
